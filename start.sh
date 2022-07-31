@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "••• STARTING GODFATHERBOT •••"
-python3 -m PluginGod
+python3 -m GodFather
