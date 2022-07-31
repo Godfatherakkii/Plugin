@@ -1,7 +1,7 @@
 from telethon.utils import get_peer_id
 from telethon.tl.functions.users import GetFullUserRequest
 
-from .session import Hell, H2, H3, H4, H5
+from .session import godfather, H2, H3, H4, H5
 from GodFather.sql.gvar_sql import gvarstat
 
 
@@ -12,7 +12,7 @@ async def clients_list():
         for b in a:
             c = int(b)
             user_ids.append(c)
-    main_id = await Hell.get_me()
+    main_id = await godfather.get_me()
     user_ids.append(main_id.id)
 
     try:
