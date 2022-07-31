@@ -1,21 +1,21 @@
 import datetime
 import time
 
-from GodFtaher import *
-from GodFtaher.clients import *
-from GodFtaher.config import Config
-from GodFtaher.helpers import *
-from GodFtaher.utils import *
-from GodFtaher.random_strings import *
-from GodFtaher.version import __hell__
-from GodFtaher.sql.gvar_sql import gvarstat
+from GodFather import *
+from GodFather.clients import *
+from GodFather.config import Config
+from GodFather.helpers import *
+from GodFather.utils import *
+from GodFather.random_strings import *
+from GodFather.version import __hell__
+from GodFather.sql.gvar_sql import gvarstat
 from telethon import version
 
-hell_logo = "./GodFtaher/resources/pics/GodFtaher_logo.jpg"
-cjb = "./GodFtaher/resources/pics/cjb.jpg"
-restlo = "./GodFtaher/resources/pics/rest.jpeg"
-shuru = "./GodFtaher/resources/pics/shuru.jpg"
-shhh = "./GodFtaher/resources/pics/chup_madarchod.jpeg"
+hell_logo = "./GodFather/resources/pics/GodFtaher_logo.jpg"
+cjb = "./GodFather/resources/pics/cjb.jpg"
+restlo = "./GodFather/resources/pics/rest.jpeg"
+shuru = "./GodFather/resources/pics/shuru.jpg"
+shhh = "./GodFather/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 hell_ver = __hell__
