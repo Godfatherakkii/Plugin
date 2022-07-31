@@ -1,11 +1,11 @@
-FROM teamvaders/hellbot:latest
+FROM godfatherakkii/GODFATHERBOT:latest
 
-RUN git clone https://github.com/HellBoy-OP/Plugins.git /root/hellbot
+RUN git clone https://github.com/LEGEND-LX/PluginGod.git /root/PluginGod
 
-WORKDIR /root/hellbot
+WORKDIR /root/PluginGod
 
 RUN pip3 install -U -r requirements.txt
 
-ENV PATH="/home/hellbot/bin:$PATH"
+ENV PATH="/home/PluginGod/bin:$PATH"
 
-CMD ["python3", "-m", "hellbot"]
+CMD ["python3", "-m", "PluginGod"]
