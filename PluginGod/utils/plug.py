@@ -39,17 +39,17 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import hellbot.utils
 
-        path = Path(f"hellbot/plugins/{shortname}.py")
-        name = "hellbot.plugins.{}".format(shortname)
+        path = Path(f"PluginGod/plugins/{shortname}.py")
+        name = "PluginGod.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("HellBot - Successfully imported " + shortname)
+        LOGS.info("𝔊𝔬𝔡𝔉𝔞𝔱𝔥𝔢𝔯𝔅𝔬𝔱 - 𝔖𝔲𝔠𝔠𝔢𝔰𝔰𝔣𝔲𝔩𝔩𝔶 𝔦𝔪𝔭𝔬𝔯𝔱𝔢𝔡 " + shortname)
     else:
         import hellbot.utils
 
-        path = Path(f"hellbot/plugins/{shortname}.py")
-        name = "hellbot.plugins.{}".format(shortname)
+        path = Path(f"PluginGod/plugins/{shortname}.py")
+        name = "PluginGod.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
@@ -86,8 +86,8 @@ def load_module(shortname):
         sys.modules["userbot.events"] = hellbot
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["hellbot.plugins." + shortname] = mod
-        LOGS.info("⚡ Hêllẞø† ⚡ - Successfully Imported " + shortname)
+        sys.modules["PluginGod.plugins." + shortname] = mod
+        LOGS.info("💥𝔊𝔬𝔡𝔉𝔞𝔱𝔥𝔢𝔯𝔅𝔬𝔱💥- 𝔖𝔲𝔠𝔠𝔢𝔰𝔰𝔣𝔲𝔩𝔩𝔶 ℑ𝔪𝔭𝔬𝔯𝔱𝔢𝔡" + shortname)
 
 
 # remove plugins
@@ -111,18 +111,18 @@ def remove_plugin(shortname):
 
 async def plug_channel(client, channel):
     if channel:
-        LOGS.info("⚡ Hêllẞø† ⚡ - PLUGIN CHANNEL DETECTED.")
-        LOGS.info("⚡ Hêllẞø† ⚡ - Starting to load extra plugins.")
+        LOGS.info("💥𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙💥- 𝕻𝕷𝖀𝕲𝕴𝕹 𝕮𝕳𝕬𝕹𝕹𝕰𝕷 𝕯𝕰𝕿𝕰𝕮𝕿𝕰𝕯")
+        LOGS.info("💥𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗𝕭𝖔𝖙💥 - 𝕾𝖙𝖆𝖗𝖙𝖎𝖓𝖌 𝖙𝖔 𝖑𝖔𝖆𝖉 𝖊𝖝𝖙𝖗𝖆 𝖕𝖑𝖚𝖌𝖎𝖓𝖘")
         plugs = await client.get_messages(channel, None, filter=InputMessagesFilterDocument)
         total = int(plugs.total)
         for plugins in range(total):
             plug_id = plugs[plugins].id
             plug_name = plugs[plugins].file.name
-            if os.path.exists(f"hellbot/plugins/{plug_name}"):
+            if os.path.exists(f"PluginGod/plugins/{plug_name}"):
                 return
             downloaded_file_name = await client.download_media(
                 await client.get_messages(channel, ids=plug_id),
-                "hellbot/plugins/",
+                "PluginGod/plugins/",
             )
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
