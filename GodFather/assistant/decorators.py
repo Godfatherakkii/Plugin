@@ -1,6 +1,6 @@
 import functools
 from telethon import events
-from hellbot import *
+from GodFather import *
 
 bothandler = Config.BOT_HANDLER
 
