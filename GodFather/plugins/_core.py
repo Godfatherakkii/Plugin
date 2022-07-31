@@ -47,7 +47,7 @@ async def send(event):
     thumb = hell_logo
     input_str = event.pattern_match.group(1)
     omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {hell_mention}\n\n⚡ **[𝕷𝖊𝖌𝖊𝖓𝖆𝖉𝖗𝖞 𝕬𝖋 𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗]({chnl_link})** ⚡"
-    the_plugin_file = "./PluginGod/plugins/{}.py".format(input_str.lower())
+    the_plugin_file = "./GodFather/plugins/{}.py".format(input_str.lower())
     if os.path.exists(the_plugin_file):
         await event.client.send_file(
             event.chat_id,
@@ -74,7 +74,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "./hellbot/plugins/"  # pylint:disable=E0602
+                "./GodFather/plugins/"  # pylint:disable=E0602
             )
             if owo != "-f":
                 op = open(downloaded_file_name, "r")
@@ -119,7 +119,7 @@ async def uninstall(event):
     if ".py" in shortname:
         shortname = shortname.replace(".py", "")
     hell = await eor(event, f"__Trying to uninstall plugin__ `{shortname}` ...")
-    dir_path =f"./PluginGod/plugins/{shortname}.py"
+    dir_path =f"./GodFather/plugins/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
