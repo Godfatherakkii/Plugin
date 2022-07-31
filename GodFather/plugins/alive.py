@@ -17,7 +17,7 @@ ALIVE_TEMP = """
 ║┣⪼𓆩༒Developer༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/GodFatherAkkii) 
 ║┣⪼𓆩༒X-Developer༒𓆪⭆[𝕃𝕖𝕘𝕖𝕟𝕕𝕏-ℙ𝕣𝕠](t.me/LegendHacker_IIN)
 ║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱❁۪۪
+╚══════════════════❍⊱
 ╔══❰𓆩༒Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ𓆩༒❱═➣
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼𓆩༒Ⲟⲱⲛⲉʀ༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/godfatherakkii)
@@ -30,7 +30,7 @@ ALIVE_TEMP = """
 ║┣⪼𓆩༒Ⲧⲉⳑⲉⲧⲏⲟⲛ༒𓆪⭆ </b> <i>{}</i>
 ║┣⪼[𓆩༒𝔾𝕆𝔻𝔽𝔸𝕋ℍ𝔼ℝ┣⪼ 𝐔𝐬𝐞𝐫𝐛𝐨𝐭༒𓆪](https://t.me/godfatherakkii)
 ║╰━━━━━━━━━━━━━━━➣
-╚══════════════════❍⊱❁۪۪
+╚══════════════════❍⊱❁
 <b><i>✨✨✨ <a href='https://t.me/GodFatherUserbot'>[𝕿𝖍𝖊 𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙]</a> ✨✨✨</i></b>
 """
 
@@ -47,7 +47,7 @@ msg = """{}\n
 @hell_cmd(pattern="alive$")
 async def up(event):
     cid = await client_id(event)
-    ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
+    godfatherakkii, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
     hell = await eor(event, "`Building Alive....`")
     uptime = await get_time((time.time() - StartTime))
@@ -60,7 +60,7 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/311e014e444cc43ac226a.jpg"
+        PIC = "https://telegra.ph/file/cfd870a5bf8b7d373717d.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
     omk = ALIVE_TEMP.format(godfatherakkii, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
@@ -74,11 +74,11 @@ async def hell_a(event):
     cid = await client_id(event)
     godfatherakkii, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>»» нєℓℓвσт ιѕ σиℓιиє ««</b>"
+    am = gvarstat("ALIVE_MSG") or "<b>»» GodFtaher вσт ιѕ σиℓιиє ««</b>"
     try:
         hell = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await hell[0].click(event.chat_id)
-        if event.sender_id == ForGo10God:
+        if event.sender_id == godfatherakkii:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg.format(am, tel_ver, hell_ver, uptime, abuse_m, is_sudo), parse_mode="HTML")
