@@ -11,22 +11,33 @@ from . import *
 #-------------------------------------------------------------------------------
 
 ALIVE_TEMP = """
-<b><i>🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥</b></i>
-<i><b>↼ Øwñêr ⇀</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
-╭──────────────
-┣─ <b>» Telethon ~</b> <i>{}</i>
-┣─ <b>» Hêllẞø† ~</b> <i>{}</i>
-┣─ <b>» Sudo ~</b> <i>{}</i>
-┣─ <b>» Uptime ~</b> <i>{}</i>
-┣─ <b>» Ping ~</b> <i>{}</i>
-╰──────────────
-<b><i>»»» <a href='https://t.me/its_hellbot'>[ †hê Hêllẞø† ]</a> «««</i></b>
+╔════❰𓆩༒Alive-linux𓆩༒❱═❍⊱❁
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼<i><b>↼ Øwñêr ⇀</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
+║┣⪼𓆩༒Developer༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/GodFtaherAkkii) 
+║┣⪼𓆩༒X-Developer༒𓆪⭆[𝕃𝕖𝕘𝕖𝕟𝕕𝕏-ℙ𝕣𝕠](t.me/LegendHacker_IIN)
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱❁۪۪
+╔══❰𓆩༒Ⲃⲟⲧ Ⲓⲛϝⲟʀⲙⲁⲧⲓⲟⲛ𓆩༒❱═➣
+║╭━━━━━━━━━━━━━━━➣
+║┣⪼𓆩༒Ⲟⲱⲛⲉʀ༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/godfatherakkii)
+║┣⪼𓆩༒Ⲋⲧⲁⲧυⲋ༒𓆪⭆Ⲟⲛⳑⲓⲛⲉ
+║┣⪼𓆩༒Ⲃⲟⲧ Ⳳⲉʀⲋⲓⲟⲛ༒𓆪⭆ <a href='tg://user?id={}'>{}</a>
+║┣⪼𓆩༒Ⳙⲣⲧⲓⲙⲉ༒𓆪⭆      </b> <i>{}</i>
+║┣⪼𓆩༒Ⲃⲟⲧ Ⲣⲓⲛⳋ༒𓆪⭆        290.09.8
+║┣⪼𓆩༒𝖀𝖘𝖊𝖗𝕭𝖔𝖙༒𓆪⭆   𝕬1.0
+║┣⪼𓆩༒Os:༒𓆪⭆    [Kali GNU/Linux](https://pkg.kali.org/derivative/kali-roll/) 
+║┣⪼𓆩༒Ⲧⲉⳑⲉⲧⲏⲟⲛ༒𓆪⭆ </b> <i>{}</i>
+║┣⪼[𓆩༒𝔾𝕆𝔻𝔽𝔸𝕋ℍ𝔼ℝ┣⪼ 𝐔𝐬𝐞𝐫𝐛𝐨𝐭༒𓆪](https://t.me/godfatherakkii)
+║╰━━━━━━━━━━━━━━━➣
+╚══════════════════❍⊱❁۪۪
+<b><i>✨✨✨ <a href='https://t.me/GodFtaherUserbot'>[𝕿𝖍𝖊 𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙]</a> ✨✨✨</i></b>
 """
 
 msg = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Hêllẞø† ≈</b>  <i>{}</i>
+<b>GodFtaherẞø† ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -49,10 +60,10 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+        PIC = "https://telegra.ph/file/311e014e444cc43ac226a.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
-    omk = ALIVE_TEMP.format(ForGo10God, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
+    omk = ALIVE_TEMP.format(godfatherakkii, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
     await event.client.send_file(event.chat_id, file=PIC, caption=omk, parse_mode="HTML")
     await hell.delete()
 
@@ -61,7 +72,7 @@ async def up(event):
 @hell_cmd(pattern="hell$")
 async def hell_a(event):
     cid = await client_id(event)
-    ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
+    godfatherakkii, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
     am = gvarstat("ALIVE_MSG") or "<b>»» нєℓℓвσт ιѕ σиℓιиє ««</b>"
     try:
