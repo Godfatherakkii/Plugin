@@ -52,13 +52,13 @@ def load_module(shortname):
         name = "GodFather.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Hell
-        mod.H1 = Hell
+        mod.bot = godfather
+        mod.H1 = godfather
         mod.H2 = H2
         mod.H3 = H3
         mod.H4 = H4
         mod.H5 = H5
-        mod.Hell = Hell
+        mod.godfather = godfather
         mod.GodFather = GodFather
         mod.tbot = GodFather
         mod.tgbot = bot.tgbot
