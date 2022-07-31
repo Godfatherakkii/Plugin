@@ -6,7 +6,7 @@ import time
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
-from GodFather.clients.session import H2, H3, H4, H5, godfather, GodBot
+from GodFather.clients.session import H2, H3, H4, H5, godfather, GodFatherBot
 from GodFather.config import Config
 
 
@@ -27,7 +27,7 @@ else:
 LOGS = getLogger(__name__)
 
 bot = godfather
-tbot = GodFather
+tbot = GodFatherBot
 
 
 if not Config.API_HASH:
