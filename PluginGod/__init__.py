@@ -7,7 +7,7 @@ from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 
 from PluginGod.clients.session import H2, H3, H4, H5, Hell, HellBot
-from hellbot.config import Config
+from PluginGod.config import Config
 
 
 StartTime = time.time()
