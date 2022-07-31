@@ -78,8 +78,8 @@ async def start_msg(client, pic, version, total):
 async def join_it(client):
     if client:
         try:
-            await client(functions.channels.JoinChannelRequest("@GODFATHERCHAT"))
-            await client(functions.messages.ImportChatInviteRequest('GODFATHER_UPDATE'))
+            await client(functions.channels.JoinChannelRequest("@The_Godfather_Network"))
+            await client(functions.messages.ImportChatInviteRequest('@The_Godfather_Network'))
         except BaseException:
             pass
 
