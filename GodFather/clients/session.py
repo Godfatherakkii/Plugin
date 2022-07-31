@@ -82,7 +82,7 @@ else:
     H5 = None
 
 
-GodFather = TelegramClient(
+GODFATHERBOT = TelegramClient(
     session="GODFATHER-BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
