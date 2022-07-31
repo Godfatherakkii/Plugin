@@ -8,9 +8,9 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
-  •        [📑 Repo 📑](https://github.com/The-HellBot/HellBot)
-  •        [HellBot Network](https://t.me/hellbot_network)
+**⚡ 𝕷𝖊𝖌𝖊𝖓𝖆𝖉𝖗𝖞 𝕬𝖋 𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗 ⚡**
+  •        [📑 Repo 📑](https://github.com/godfatherakkii/GODFATHERBOT)
+  •        [GodFather Bot Network](https://t.me/godfatheruserbot)
   •  ©️ {hell_channel} ™
 """
 botname = Config.BOT_USERNAME
@@ -34,7 +34,7 @@ async def _(event):
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
-            results = await event.client.inline_query(tgbotusername, "hellbot_help")
+            results = await event.client.inline_query(tgbotusername, "GodFtaherbot_help")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
