@@ -7,10 +7,10 @@ from telethon.sessions import StringSession
 from hellbot.config import Config
 
 
-if Config.HELLBOT_SESSION:
-    session = StringSession(str(Config.HELLBOT_SESSION))
+if Config.GODFATHERBOT_SESSION:
+    session = StringSession(str(Config.GODFATHERBOT_SESSION))
 else:
-    session = "hellbot"
+    session = "GODFATHERBOT"
 
 try:
     Hell = TelegramClient(
@@ -22,7 +22,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"HELLBOT_SESSION - {e}")
+    print(f"GODFATHERBOT_SESSION - {e}")
     sys.exit()
 
 
