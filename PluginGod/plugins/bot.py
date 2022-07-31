@@ -13,10 +13,11 @@ from ..sql.gvar_sql import gvarstat
 from . import *
 
 ping_txt = """
-<b><i>╰•★★  ℘ơŋɠ ★★•╯</b></i>
+<b><i>╰•💥💥  ℘ơŋɠ 💥💥•╯</b></i>
 
     ⚘  <i>ʂ℘ɛɛɖ :</i> <code>{}</code>
     ⚘  <i>ų℘ɬıɱɛ :</i> <code>{}</code>
+    💥<i>𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗 : [𝕿𝖍𝖊 𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙](t.me/godfatherakkii)
     ⚘  <i>ơῳŋɛཞ :</i> {}
 """
 
@@ -37,7 +38,7 @@ async def pong(hell):
     event = await eor(hell, "`·.·★ ℘ıŋɠ ★·.·´")
     cid = await client_id(event)
     ForGo10God, HELL_USER = cid[0], cid[1]
-    hell_mention = f"<a href='tg://user?id={ForGo10God}'>{HELL_USER}</a>"
+    hell_mention = f"<a href='tg://user?id={godfatherakkii}'>{HELL_USER}</a>"
     uptime = await get_time((time.time() - StartTime))
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
@@ -70,7 +71,7 @@ async def is_limited(event):
         
 @hell_cmd(pattern="kickme$")
 async def leave(e):
-        await e.edit("😪 **KThnxBye** See u all in hell!!")
+        await e.edit("😪 **KThnxBye** See u all in godfather!!")
         time.sleep(1)
         if "-" in str(e.chat_id):
             await event.client(LeaveChannelRequest(e.chat_id))
