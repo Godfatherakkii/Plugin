@@ -51,11 +51,11 @@ async def client_id(event, botid=None):
         uid = await event.client(GetFullUserRequest(botid))
         ForGo10God = uid.user.id
         HELL_USER = uid.user.first_name
-        hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
+        hell_mention = f"[{HELL_USER}](tg://user?id={godfatherakkii})"
     else:
         client = await event.client.get_me()
         uid = get_peer_id(client)
-        ForGo10God = uid
+        godfatherakkii = uid
         HELL_USER = client.first_name
-        hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-    return ForGo10God, HELL_USER, hell_mention
+        hell_mention = f"[{HELL_USER}](tg://user?id={godfatherakkii})"
+    return godfatherakkii, HELL_USER, hell_mention
