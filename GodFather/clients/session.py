@@ -10,10 +10,10 @@ from GodFather.config import Config
 if Config.GODFATHERBOT_SESSION:
     session = StringSession(str(Config.GODFATHERBOT_SESSION))
 else:
-    session = "GODFATHERBOT"
+    session = "GodFatherBot"
 
 try:
-    GodFather = TelegramClient(
+    godfather = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -82,7 +82,7 @@ else:
     H5 = None
 
 
-GODFATHERBOT = TelegramClient(
+GodFatherBot = TelegramClient(
     session="GODFATHER-BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
