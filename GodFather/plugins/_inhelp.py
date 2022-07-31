@@ -17,7 +17,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 
-from GodFtaher.sql.gvar_sql import gvarstat
+from GodFather.sql.gvar_sql import gvarstat
 from . import *
 
 hell_row = Config.BUTTONS_IN_HELP
