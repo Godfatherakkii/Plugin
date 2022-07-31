@@ -7,7 +7,7 @@ from telethon.sync import TelegramClient
 
 
 print("•••   GODFATHERBOT  SESSION  GENERATOR   •••")
-print("\nHello!! Welcome to HellBot Session Generator\n")
+print("\nHello!! Welcome to GodFtaherBot Session Generator\n")
 okvai = input("Enter 69 to continue: ")
 if okvai == "69":
     print("Choose the string session type: \n1. GodFtaherBot \n2. Music Bot")
