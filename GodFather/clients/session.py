@@ -13,7 +13,7 @@ else:
     session = "GODFATHERBOT"
 
 try:
-    Hell = TelegramClient(
+    GodFather = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
@@ -82,7 +82,7 @@ else:
     H5 = None
 
 
-GodFtaher = TelegramClient(
+GodFather = TelegramClient(
     session="GODFATHER-BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
