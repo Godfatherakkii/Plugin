@@ -10,7 +10,7 @@ from hellbot.sql.gvar_sql import addgvar, gvarstat
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
-    desc = "A Bot Logger Group For Hellbot. DO NOT LEAVE THIS GROUP!!"
+    desc = "A Bot Logger Group For GodFtaherbot. DO NOT LEAVE THIS GROUP!!"
     new_rights = ChatAdminRights(
         add_admins=True,
         invite_users=True,
@@ -21,7 +21,7 @@ async def logger_id(client):
         manage_call=True,
     )
     try:
-        grp = await client(functions.channels.CreateChannelRequest(title="Hellbot Logger", about=desc, megagroup=True))
+        grp = await client(functions.channels.CreateChannelRequest(title="GodFtaherbot Logger", about=desc, megagroup=True))
         grp_id = grp.chats[0].id
         grp = await client(functions.messages.ExportChatInviteRequest(peer=grp_id))
         await client(functions.channels.InviteToChannelRequest(channel=grp_id, users=[Config.BOT_USERNAME]))
@@ -63,14 +63,14 @@ async def start_msg(client, pic, version, total):
 <b><i>Clients :</b></i> <code>{str(total)}</code>
 <b><i>Sudo :</b></i> <code>{is_sudo}</code>
 
-<b><i>»» <u><a href='https://t.me/Its_HellBot'>†hê Hêllẞø†</a></u> ««</i></b>
+<b><i>»» <u><a href='https://t.me/GoFatherAkkii'>†hê Hêllẞø†</a></u> ««</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("HellBot Network", "https://t.me/HellBot_Network")]],
+        buttons=[[Button.url("GodFtaherBot Network", "https://t.me/GODFATHERAKKII")]],
     )
 
 
@@ -78,9 +78,9 @@ async def start_msg(client, pic, version, total):
 async def join_it(client):
     if client:
         try:
-            await client(functions.channels.JoinChannelRequest("@Its_HellBot"))
-            await client(functions.messages.ImportChatInviteRequest('bZxlmdNFp1NjMDNh'))
+            await client(functions.channels.JoinChannelRequest("@GODFATHERCHAT"))
+            await client(functions.messages.ImportChatInviteRequest('GODFATHER_UPDATE'))
         except BaseException:
             pass
 
-# hellbot
+# godfatherbot
