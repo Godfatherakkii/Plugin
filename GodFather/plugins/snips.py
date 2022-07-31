@@ -1,6 +1,6 @@
 from telethon import events
 
-from GodFtaher.sql import snip_sql as sq
+from GodFather.sql import snip_sql as sq
 from . import *
 
 

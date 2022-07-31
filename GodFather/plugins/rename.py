@@ -7,7 +7,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 
-from GodFtaher.sql.gvar_sql import addgvar, delgvar, gvarstat
+from GodFather.sql.gvar_sql import addgvar, delgvar, gvarstat
 from . import *
 
 thumb_image_path = Config.THUMB_IMG
@@ -156,7 +156,7 @@ async def _(event):
                     event.chat_id,
                     downloaded_file_name,
                     thumb=thumb,
-                    caption="reuploaded by GodFtaher",
+                    caption="reuploaded by GodFather",
                     force_document=False,
                     allow_cache=False,
                     reply_to=event.message.id,

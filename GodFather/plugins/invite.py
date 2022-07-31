@@ -57,7 +57,7 @@ def user_full_name(user):
 async def get_users(event):
     hel_ = event.text[11:]
     hell_chat = hel_.lower()
-    restricted = ["@GodFtaher_chat", "@its_GodFtaher"]
+    restricted = ["@GodFather_chat", "@its_GodFather"]
     hell = await eor(event, f"__Inviting members from__ {hel_}")
     if hell_chat in restricted:
         await hell.edit("You can't Invite Members from there.")

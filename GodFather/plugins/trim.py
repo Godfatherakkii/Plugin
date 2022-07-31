@@ -5,7 +5,7 @@ import time
 
 from . import *
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/GodFtaher.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "./trim/GodFather.media.ffmpeg"
 
 
 @hell_cmd(pattern="tsave$")

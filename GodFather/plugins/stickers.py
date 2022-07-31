@@ -16,7 +16,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeSticker, InputStickerSetID, MessageMediaPhoto, InputMessagesFilterDocument
 from telethon.utils import get_input_document
 
-from GodFtaher.sql.gvar_sql import addgvar, gvarstat
+from godfather.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
@@ -42,7 +42,7 @@ async def kang(event):
     un = f"@{user.username}" if user.username else HELL_USER
     un_ = user.username if user.username else ForGo10God
     message = await event.get_reply_message()
-    GodFtaher = gvarstat("STICKER_PACKNAME")
+    godfather = gvarstat("STICKER_PACKNAME")
     photo = None
     emojibypass = False
     is_anim = False
@@ -113,8 +113,8 @@ async def kang(event):
                 pack = 1
                 emoji = splat[1]
 
-        packname = f"GodFtaher_{un_}_{pack}"
-        packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† Vol.{pack}"
+        packname = f"godfather_{un_}_{pack}"
+        packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
 
@@ -147,8 +147,8 @@ async def kang(event):
                     x = await conv.get_response()
                     while "120" in x.text:
                         pack += 1
-                        packname = f"GodFtaher_{un_}_{pack}"
-                        packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† Vol.{pack}"
+                        packname = f"godfather_{un_}_{pack}"
+                        packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† Vol.{pack}"
                         cmd = "/newpack"
                         await hell.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
                         await conv.send_message(packname)
@@ -191,8 +191,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 if is_anim:
-                    packname = f"GodFtaher_{un_}_{pack}_anim"
-                    packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
+                    packname = f"godfather_{un_}_{pack}_anim"
+                    packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -244,8 +244,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 elif is_vid:
-                    packname = f"GodFtaher_{un_}_{pack}_vid"
-                    packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† (Video)"
+                    packname = f"godfather_{un_}_{pack}_vid"
+                    packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
                     await conv.get_response()
@@ -272,8 +272,8 @@ async def kang(event):
             await hell.edit("`Preparing a new pack....`")
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
-                    packname = f"GodFtaher_{un_}_{pack}"
-                    packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† Vol.{pack}"
+                    packname = f"godfather_{un_}_{pack}"
+                    packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -300,8 +300,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
             
                 if is_anim:
-                    packname = f"GodFtaher_{un_}_{pack}_anim"
-                    packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
+                    packname = f"godfather_{un_}_{pack}_anim"
+                    packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -331,8 +331,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 if is_vid:
-                    packname = f"GodFtaher_{un_}_{pack}_vid"
-                    packnick = f"{GodFtaher}" if GodFtaher else f"{un}'s Hêllẞø† (Video)"
+                    packname = f"godfather_{un_}_{pack}_vid"
+                    packnick = f"{godfather}" if godfather else f"{un}'s Hêllẞø† (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
                     await conv.get_response()
@@ -594,7 +594,7 @@ async def sticklet(event):
     )
 
     image_stream = io.BytesIO()
-    image_stream.name = "GodFtaher.webp"
+    image_stream.name = "godfather.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 

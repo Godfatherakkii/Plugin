@@ -1,6 +1,6 @@
 from . import *
-# Credits to @ForGo10God developer of GodFtaher.
-# This is my first plugin that I made when I released first GodFtaher.
+# Credits to @ForGo10God developer of GodFather.
+# This is my first plugin that I made when I released first GodFather.
 # Modified to work in groups with inline mode disabled.
 # Added error msg if no voice is found.
 # So please dont remove credit. 

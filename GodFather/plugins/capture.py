@@ -58,7 +58,7 @@ async def _(event):
 
 
 CmdHelp("capture").add_command(
-  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/hellboy-op/GodFtaher"
+  "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/hellboy-op/GodFather"
 ).add_command(
   "webshot", "<link>", f"Same as  {hl}screenshot."
 ).add_info(

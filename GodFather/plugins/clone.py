@@ -5,7 +5,7 @@ from telethon.tl import functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
-from GodFtaher.sql.gvar_sql import addgvar, gvarstat, delgvar
+from GodFather.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 

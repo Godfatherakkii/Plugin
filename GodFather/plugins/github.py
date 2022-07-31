@@ -21,7 +21,7 @@ async def download(event):
     splt = txts.split("|")
     path = splt[0]
     branch = splt[1] or "master"
-    GodFtaher = await eor(event, "Processing ...")
+    GodFather = await eor(event, "Processing ...")
     if not os.path.isdir(GIT_TEMP_DIR):
         os.makedirs(GIT_TEMP_DIR)
     start = datetime.datetime.now()
@@ -33,19 +33,19 @@ async def download(event):
             reply_message.media, GIT_TEMP_DIR
         )
     except Exception as e:
-        await eod(GodFtaher, str(e))
+        await eod(GodFather, str(e))
     else:
         end = datetime.datetime.now()
         ms = (end - start).seconds
         await event.delete()
-        await GodFtaher.edit(
+        await GodFather.edit(
             "Downloaded to `{}` in {} seconds.".format(downloaded_file_name, ms)
         )
-        await GodFtaher.edit("Committing to Github....")
-        await git_commit(downloaded_file_name, path, branch, GodFtaher)
+        await GodFather.edit("Committing to Github....")
+        await git_commit(downloaded_file_name, path, branch, GodFather)
 
 
-async def git_commit(file_name, path, branch, GodFtaher):
+async def git_commit(file_name, path, branch, GodFather):
     content_list = []
     access_token = Config.GITHUB_ACCESS_TOKEN
     g = Github(access_token)
@@ -61,7 +61,7 @@ async def git_commit(file_name, path, branch, GodFtaher):
     for i in content_list:
         create_file = True
         if i == 'ContentFile(path="' + file_name + '")':
-            return await GodFtaher.edit("`File Already Exists`")
+            return await GodFather.edit("`File Already Exists`")
             create_file = False
     path = path
     file_name = file_name
@@ -75,14 +75,14 @@ async def git_commit(file_name, path, branch, GodFtaher):
             print("Committed File")
             ccess = Config.GIT_REPO_NAME
             ccess = ccess.strip()
-            await GodFtaher.edit(
+            await GodFather.edit(
                 f"`Commited On Your Github Repo`\n\n[Your Commit](https://github.com/{ccess}/tree/{branch}/)"
             )
         except:
             print("Cannot Create Plugin")
-            await eod(GodFtaher, "Cannot Upload File")
+            await eod(GodFather, "Cannot Upload File")
     else:
-        return await eod(GodFtaher, "`Committed Suicide`")
+        return await eod(GodFather, "`Committed Suicide`")
 
 
 @hell_cmd(pattern="github(?:\s|$)([\s\S]*)")
@@ -123,7 +123,7 @@ Profile Created: {}""".format(
 
 
 CmdHelp("github").add_command(
-  "commit", "<reply to a file> <path>|<branch>", "Uploads the file on github repo as provided in Heroku Config GIT_REPO_NAME. In short makes a commit to git repo from Userbot", "commit ./GodFtaher/plugins/example.py|master"
+  "commit", "<reply to a file> <path>|<branch>", "Uploads the file on github repo as provided in Heroku Config GIT_REPO_NAME. In short makes a commit to git repo from Userbot", "commit ./GodFather/plugins/example.py|master"
 ).add_command(
   "github", "<git username>", "Fetches the details of the given git username"
 ).add_info(

@@ -3,13 +3,19 @@ import asyncio
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from GodFtaher.sql import antiflood_sql as sq
+from GodFather.sql import antiflood_sql as sq
 from . import *
 
 CHAT_FLOOD = sq.__load_flood_settings()
 ANTI_FLOOD_WARN_MODE = ChatBannedRights(
     until_date=None, view_messages=None, send_messages=True
 )
+
+
+
+
+
+
 
 
 @hell_handler()

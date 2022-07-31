@@ -5,7 +5,7 @@ import time
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from GodFtaher.sql.gvar_sql import gvarstat
+from GodFather.sql.gvar_sql import gvarstat
 from . import *
 
 #-------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ ALIVE_TEMP = """
 ╔════❰𓆩༒Alive-linux𓆩༒❱═❍⊱❁
 ║╭━━━━━━━━━━━━━━━➣
 ║┣⪼<i><b>↼ Øwñêr ⇀</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
-║┣⪼𓆩༒Developer༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/GodFtaherAkkii) 
+║┣⪼𓆩༒Developer༒𓆪⭆[𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗](t.me/GodFatherAkkii) 
 ║┣⪼𓆩༒X-Developer༒𓆪⭆[𝕃𝕖𝕘𝕖𝕟𝕕𝕏-ℙ𝕣𝕠](t.me/LegendHacker_IIN)
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪
@@ -31,13 +31,13 @@ ALIVE_TEMP = """
 ║┣⪼[𓆩༒𝔾𝕆𝔻𝔽𝔸𝕋ℍ𝔼ℝ┣⪼ 𝐔𝐬𝐞𝐫𝐛𝐨𝐭༒𓆪](https://t.me/godfatherakkii)
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁۪۪
-<b><i>✨✨✨ <a href='https://t.me/GodFtaherUserbot'>[𝕿𝖍𝖊 𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙]</a> ✨✨✨</i></b>
+<b><i>✨✨✨ <a href='https://t.me/GodFatherUserbot'>[𝕿𝖍𝖊 𝕲𝖔𝖉𝕱𝖆𝖙𝖍𝖊𝖗𝕭𝖔𝖙]</a> ✨✨✨</i></b>
 """
 
 msg = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>GodFtaherẞø† ≈</b>  <i>{}</i>
+<b>GodFatherẞø† ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>

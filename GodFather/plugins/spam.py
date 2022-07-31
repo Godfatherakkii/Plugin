@@ -26,13 +26,13 @@ async def spammer(event):
 async def bigspam(event):
     lg_id = Config.LOGGER_ID
     msg_ = event.text[9:]
-    GodFtaher_count = int(msg_.split(" ")[0])
+    GodFather_count = int(msg_.split(" ")[0])
     reply_msg = await event.get_reply_message()
     if reply_msg:
         hell_spam = reply_msg
     else:
-        hell_spam = msg_.replace(str(GodFtaher_count), "")
-    for i in range(GodFtaher_count):
+        hell_spam = msg_.replace(str(GodFather_count), "")
+    for i in range(GodFather_count):
         await event.client.send_message(event.chat_id, hell_spam, reply_to=reply_msg)
     await event.delete()
     await event.client.send_message(lg_id, f"#BIGSPAM \n\nBigspammed  `{hell_count}`  messages !!")
@@ -67,8 +67,8 @@ async def _(event):
         await event.client.send_message(event.chat_id, input_str)
 
 
-# Special Break Spam Module For GodFtaher Made By Chirag Bhargava.
-# Team GodFtaher
+# Special Break Spam Module For GodFather Made By Chirag Bhargava.
+# Team GodFather
 @hell_cmd(pattern="bspam(?:\s|$)([\s\S]*)")
 async def spammer(event):
     lg_id = Config.LOGGER_ID
@@ -123,7 +123,7 @@ CmdHelp("spam").add_command(
 ).add_command(
   "bspam", "<count> <text or reply>", "Spams the message X times without floodwait. Breaks the spam count to avoid floodwait.", "bspam 9999 Hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what GodFtaher iz known for. The Best BigSpam Ever", "bigspam 9999 Hello"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what GodFather iz known for. The Best BigSpam Ever", "bigspam 9999 Hello"
 ).add_info(
   "Spammers Commands"
 ).add_warning(

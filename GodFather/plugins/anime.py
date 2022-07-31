@@ -96,7 +96,7 @@ async def canon(event):
         paste = await telegraph_paste(f"📃 Fillers List For “ {list_[0]} ”", msg)
         await nub.edit(f"**📃 Filler Episode List For [“ {list_[0]} ”]({paste}) !!**")
         return
-    GodFtaher = f"**📃 Filler Episode Lists :** \n\n"
+    GodFather = f"**📃 Filler Episode Lists :** \n\n"
     for i in list_:
         result = parse_filler(hel_.get(i))
         msg = ""
@@ -110,8 +110,8 @@ async def canon(event):
             msg += "\n\n<b>Anime Canon episodes :</b>\n"
             msg += f'<code>{str(result.get("ac_ep"))}</code>'
         paste = await telegraph_paste(f"📃 Fillers List For “ {i} ”", msg)
-        GodFtaher += f"• [{i}]({paste})\n"
-    await nub.edit(GodFtaher)
+        GodFather += f"• [{i}]({paste})\n"
+    await nub.edit(GodFather)
 
 
 @hell_cmd(pattern="airing(?:\s|$)([\s\S]*)")

@@ -8,8 +8,8 @@ from vcam import vcam, meshGen
 
 from . import *
 
-if not os.path.isdir("./GodFtaher/"):
-    os.makedirs("./GodFtaher/")
+if not os.path.isdir("./GodFather/"):
+    os.makedirs("./GodFather/")
 
 
 @hell_cmd(pattern="feye$")

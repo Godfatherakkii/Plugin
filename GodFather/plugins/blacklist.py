@@ -2,7 +2,7 @@ import re
 
 from telethon import events
 
-from GodFtaher.sql import blacklist_sql as sq
+from GodFather.sql import blacklist_sql as sq
 from . import *
 
 

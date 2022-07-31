@@ -5,7 +5,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 from telethon.tl.functions.users import GetFullUserRequest
 
-from GodFtaher.sql.fsub_sql import *
+from GodFather.sql.fsub_sql import *
 from . import *
 
 

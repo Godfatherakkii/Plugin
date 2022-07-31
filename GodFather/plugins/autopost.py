@@ -1,7 +1,7 @@
 from telethon import events
 
-from GodFtaher.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
-from GodFtaher.sql.gvar_sql import gvarstat, addgvar, delgvar
+from GodFather.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
+from GodFather.sql.gvar_sql import gvarstat, addgvar, delgvar
 
 from . import *
 

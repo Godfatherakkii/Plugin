@@ -2,7 +2,7 @@ import os
 
 from telethon.tl.functions.users import GetFullUserRequest
 
-from GodFtaher.sql.gvar_sql import addgvar, gvarstat, delgvar
+from godfather.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 

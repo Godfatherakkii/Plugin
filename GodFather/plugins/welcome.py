@@ -1,7 +1,7 @@
 from telethon import events
 
-from GodFtaher.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
-from GodFtaher.sql.gvar_sql import gvarstat, addgvar, delgvar
+from GodFather.sql.welcome_sql import get_current_welcome, add_welcome, rm_welcome, update_welcome
+from GodFather.sql.gvar_sql import gvarstat, addgvar, delgvar
 from . import *
 
 

@@ -5,8 +5,8 @@ import requests
 from telethon import events
 from telethon.utils import get_peer_id
 
-from GodFtaher.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
-from GodFtaher.sql.gvar_sql import addgvar, gvarstat, delgvar
+from GodFather.sql.echo_sql import addecho, get_all_echos, is_echo, remove_echo
+from GodFather.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 
