@@ -55,8 +55,8 @@ if not Config.DB_URI:
     quit(1)
 
 
-if not Config.HELLBOT_SESSION:
-    LOGS.warning("Please fill var HELLBOT_SESSION to continue.")
+if not Config.GODFATHERBOT_SESSION:
+    LOGS.warning("Please fill var GODFATHERBOT_SESSION to continue.")
     quit(1)
 
 
@@ -87,4 +87,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-# hellbot
+# LEGENDbot
