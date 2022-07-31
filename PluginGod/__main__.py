@@ -14,7 +14,7 @@ from hellbot.version import __hell__ as hellver
 
 hl = Config.HANDLER
 
-HELL_PIC = "https://telegra.ph/file/cb0bd62632a3a2b6b2726.jpg"
+HELL_PIC = "https://telegra.ph/file/311e014e444cc43ac226a.jpg"
 
 
 # Client Starter
@@ -39,7 +39,7 @@ async def plug_load(path):
             path1 = Path(hell.name)
             shortname = path1.stem
             if shortname.replace(".py", "") in Config.UNLOAD:
-                os.remove(Path(f"hellbot/plugins/{shortname}.py"))
+                os.remove(Path(f"PluginGod/plugins/{shortname}.py"))
             else:
                 load_module(shortname.replace(".py", ""))      
 
@@ -62,20 +62,30 @@ async def start_hellbot():
         tbot_id = await tbot.get_me()
         Config.BOT_USERNAME = f"@{tbot_id.username}"
         bot.tgbot = tbot
-        LOGS.info("••• Starting HellBot •••")
-        C1 = await hells(Config.HELLBOT_SESSION, bot, "HELLBOT_SESSION")
+        LOGS.info("════❰𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗❱═❍⊱❁")
+        C1 = await hells(Config.GODFATHERBOT_SESSION, bot, "GODFATHERBOT_SESSION")
         C2 = await hells(Config.SESSION_2, H2, "SESSION_2")
         C3 = await hells(Config.SESSION_3, H3, "SESSION_3")
         C4 = await hells(Config.SESSION_4, H4, "SESSION_4")
         C5 = await hells(Config.SESSION_5, H5, "SESSION_5")
         await tbot.start()
         total = C1 + C2 + C3 + C4 + C5
-        LOGS.info("••• HellBot Startup Completed •••")
-        LOGS.info("••• Starting to load Plugins •••")
-        await plug_load("hellbot/plugins/*.py")
+        LOGS.info("╔════❰𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗❱═❍⊱❁۪۪")
+        LOGS.info("║┣⪼𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝔾𝕠𝕕𝔽𝕥𝕒𝕙𝕖𝕣 𝕌𝕤𝕖𝕣𝔹𝕠𝕥║")
+        LOGS.info("║┣⪼𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕃𝕠𝕕𝕚𝕟𝕘..............................")
+        LOGS.info("╚══════════════════❍⊱")
+        await plug_load("PluginGod/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info("⚡ Your HellBot Is Now Working ⚡")
-        LOGS.info("Head to @Its_HellBot for Updates. Also join chat group to get help regarding to HellBot.")
+        LOGS.info(f"""『🔱𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗 𝖀𝖘𝖊𝖗𝕭𝖔𝖙🔱』➙𖤍࿐ IS ON!!! 𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗 VERSION :- 𝕍:𝕒 𝟙.𝟘
+                      TYPE :- " .gpromote @GODFATHERAKKII " OR .help OR .ping CHECK IF I'M ON!
+                      ╔════❰𝕲𝖔𝖉𝕱𝖙𝖆𝖍𝖊𝖗❱═❍⊱❁
+                      ║┣⪼ OWNER - 𝔾𝕠𝕕𝔽𝕒𝕥𝕙𝕖𝕣 𝔸𝕜𝕜𝕚𝕚
+                      ║┣⪼ Ultra Real Stick Bot 
+                      ║┣⪼ CREATOR -@godfatherakkii
+                      ║┣⪼ TELETHON - 1.2.0
+                      ║┣⪼ ✨ 『🔱𝕲 𝖔 𝖉 𝖋 𝖆 𝖙 𝖍 𝖊 𝖗🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+                      ║╰━━━━━━━━━━━━━━━➣
+                      ╚══════════════════❍⊱""")
         LOGS.info(f"» Total Clients = {str(total)} «")
         await hell_is_on(total)
     except Exception as e:
