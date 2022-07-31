@@ -5,9 +5,9 @@ from pathlib import Path
 from telethon import events
 
 from .session import H2, H3, H4, H5
-from GodFtaher import CMD_LIST, LOAD_PLUG, bot
-from GodFtaher.config import Config
-from GodFtaher.sql.gvar_sql import gvarstat
+from GodFather import CMD_LIST, LOAD_PLUG, bot
+from GodFather.config import Config
+from GodFather.sql.gvar_sql import gvarstat
 
 
 def hell_cmd(
