@@ -193,7 +193,7 @@ async def muth(event):
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
         if is_muted(event.chat_id, event.chat_id):
             return await eod(hell, "Nigga is already muted here 🥴")
-        if event.chat_id == ForGo10God:
+        if event.chat_id == godfatherakkii:
             return await eod(hell, "You can't mute yourself !")
         try:
             mute(event.chat_id, event.chat_id)
@@ -223,11 +223,11 @@ async def muth(event):
                 name = (await event.client.get_entity(userid)).first_name
         else:
             return await eod(hell, "I Need a user to mute !!")
-        if userid == ForGo10God:
+        if userid == godfatherakkii:
             return await eod(hell, "You can't mute yourself !")
         if str(userid) in DEVLIST:
             return await eod(hell, "**Error Muting God**")
-        if ForGo10God not in admin_:
+        if godfatherakkii not in admin_:
             return await eod(hell, NO_PERM)
         if userid in admin_:
             if is_muted(userid, event.chat_id):
@@ -258,7 +258,7 @@ async def muth(event):
 @hell_cmd(pattern="unmute(?:\s|$)([\s\S]*)")
 async def nomuth(event):
     x = await client_id(event)
-    ForGo10God = x[0]
+    godfatherakkii = x[0]
     if event.is_private:
         hell = await eor(event, "`Unmuting ...`")
         replied_user = await event.client(GetFullUserRequest(event.chat_id))
@@ -292,7 +292,7 @@ async def nomuth(event):
                 name = (await event.client.get_entity(userid)).first_name
         else:
             return await eod(hell, "I need a user to unmute!!")
-        if ForGo10God not in admin_:
+        if godfatherakkii not in admin_:
             return await eod(hell, NO_PERM)
         if userid in admin_:
             if not is_muted(userid, event.chat_id):
