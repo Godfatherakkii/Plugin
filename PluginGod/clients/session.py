@@ -83,7 +83,7 @@ else:
 
 
 HellBot = TelegramClient(
-    session="Hell-TBot",
+    session="GODFATHER-BOT",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
