@@ -39,8 +39,8 @@ def load_module(shortname):
     elif shortname.endswith("_"):
         import GodFather.utils
 
-        path = Path(f"PluginGod/plugins/{shortname}.py")
-        name = "PluginGod.plugins.{}".format(shortname)
+        path = Path(f"GodFather/plugins/{shortname}.py")
+        name = "GodFather.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -48,8 +48,8 @@ def load_module(shortname):
     else:
         import GodFather.utils
 
-        path = Path(f"PluginGod/plugins/{shortname}.py")
-        name = "PluginGod.plugins.{}".format(shortname)
+        path = Path(f"GodFather/plugins/{shortname}.py")
+        name = "GodFather.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Hell
@@ -86,7 +86,7 @@ def load_module(shortname):
         sys.modules["userbot.events"] = GodFather
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["PluginGod.plugins." + shortname] = mod
+        sys.modules["GodFather.plugins." + shortname] = mod
         LOGS.info("💥𝔊𝔬𝔡𝔉𝔞𝔱𝔥𝔢𝔯𝔅𝔬𝔱💥- 𝔖𝔲𝔠𝔠𝔢𝔰𝔰𝔣𝔲𝔩𝔩𝔶 ℑ𝔪𝔭𝔬𝔯𝔱𝔢𝔡" + shortname)
 
 
@@ -118,11 +118,11 @@ async def plug_channel(client, channel):
         for plugins in range(total):
             plug_id = plugs[plugins].id
             plug_name = plugs[plugins].file.name
-            if os.path.exists(f"PluginGod/plugins/{plug_name}"):
+            if os.path.exists(f"GodFather/plugins/{plug_name}"):
                 return
             downloaded_file_name = await client.download_media(
                 await client.get_messages(channel, ids=plug_id),
-                "PluginGod/plugins/",
+                "GodFather/plugins/",
             )
             path1 = Path(downloaded_file_name)
             shortname = path1.stem
