@@ -4,7 +4,7 @@ from telethon import TelegramClient
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 
-from PluginGod.config import Config
+from hellbot.config import Config
 
 
 if Config.GODFATHERBOT_SESSION:
