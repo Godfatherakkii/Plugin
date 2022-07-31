@@ -70,7 +70,7 @@ async def git_commit(file_name, path, branch, GodFather):
         print(file_name)
         try:
             repo.create_file(
-                path, f"Uploaded file {file_name} by GodFtaherẞø†", commit_data, branch=branch
+                path, f"Uploaded file {file_name} by Hêllẞø†", commit_data, branch=branch
             )
             print("Committed File")
             ccess = Config.GIT_REPO_NAME

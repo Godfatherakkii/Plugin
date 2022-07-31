@@ -12,12 +12,6 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-
-
-
-
-
-
 @hell_handler()
 async def _(event):
     if not CHAT_FLOOD:
