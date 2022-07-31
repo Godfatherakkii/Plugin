@@ -49,7 +49,7 @@ async def clients_list():
 async def client_id(event, botid=None):
     if botid is not None:
         uid = await event.client(GetFullUserRequest(botid))
-        ForGo10God = uid.user.id
+        godfatherakkii = uid.user.id
         HELL_USER = uid.user.first_name
         hell_mention = f"[{HELL_USER}](tg://user?id={godfatherakkii})"
     else:
